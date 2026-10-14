@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pokémon Baseball | Fantasy Draft</title>
+<meta name="theme-color" content="#171719">
+<link rel="stylesheet" href="/style.css">
+<script src="/engine.js" defer></script>
+<script src="/app.js" defer></script>
+</head>
+<body>
+<header class="top"><div class="max header"><a class="logo" href="/"><span>POKÉMON <b>BASEBALL</b></span></a><div class="nav"><button id="home-link" class="navbutton">Fantasy leagues</button><button id="solo-link" class="navbutton">Solo challenge</button><button id="audio-btn" class="navbutton" title="Toggle pick sound">Sound off</button></div></div></header>
+<div class="max">
+<div id="toast" role="status" aria-live="polite"></div>
+<main>
+<section id="home-view">
+  <div class="intro"><div><span class="overline">DRAFT • BUILD • COMPETE</span><h1>Pokémon<br><em>Baseball</em></h1><p>Draft 15 Pokémon with friends, select 10 starters and 5 bench replacements, then play a 162-game baseball season and a best-of-seven championship.</p><div class="tiny">10 starters + 5 bench · 3–6 teams · Snake draft · Live multiplayer · Free local prototype</div></div><div class="ball">⚾</div></div>
+  <div class="home-grid">
+    <section class="panel"><div class="panel-tag">01 / GET STARTED</div><h2>Create fantasy league</h2><form id="create-form">
+      <label>Team name<input name="name" placeholder="Pallet Town Sluggers" required maxlength="24" value="Pallet Town Sluggers" /></label>
+      <div class="form-row"><label>Pokémon pool<select name="mode" id="mode-select"></select></label><label>Number of teams<select name="size"><option>3</option><option selected>4</option><option>5</option><option>6</option></select></label></div>
+      <div class="form-row"><label>Pick timer<select name="timer"><option value="0">No timer</option><option value="30">30 seconds</option><option value="60" selected>60 seconds</option><option value="120">120 seconds</option></select></label><label>Draft order<select name="order"><option value="random">Random</option><option value="set">Host decides</option></select></label></div>
+      <div class="form-row checkrow"><label class="check"><input name="legends" type="checkbox" checked> Allow legendaries</label><label class="check"><input name="pub" type="checkbox"> Public lobby</label></div>
+      <div class="smallhint" id="pool-size"></div><button class="btn primary wide" type="submit">Create league</button>
+    </form></section>
+    <div class="side-stack"><section class="panel"><div class="panel-tag">02 / JOIN FRIENDS</div><h2>Join a league</h2><form id="join-form"><label>Invite code<input id="join-code" placeholder="5-character code" maxlength="5" autocomplete="off" style="text-transform:uppercase" required></label><label>Your team name<input name="name" placeholder="Viridian Vipers" maxlength="24" required></label><button class="btn secondary wide">Join draft</button></form></section>
+    <section class="panel"><div class="panel-tag">03 / PRACTICE</div><h2>Solo challenge</h2><p class="muted">Try the original-style region + type roll challenge. Build a 15-Pokémon roster, then face 162 games with fatigue and substitutions.</p><button id="start-solo" class="btn secondary wide">Play solo</button></section></div>
+  </div>
+  <section class="panel past-area"><div class="panel-tag">MY LEAGUES</div><h2>Past and active fantasy leagues</h2><p class="hintline">Leagues joined on this browser appear here. You can rejoin an active draft or review completed results while the server still has the league saved.</p><div id="past-leagues-list" class="past-leagues"></div></section><section class="panel personal-records-panel"><div class="panel-tag">PERSONAL RECORD BOOK</div><h2>Your seasons & achievements</h2><div id="record-book"></div></section><section class="panel public-area"><div class="sectionhead"><div><div class="panel-tag">PUBLIC LEAGUES</div><h2>Open lobbies</h2></div><button id="refresh-lobbies" class="btn quiet">Refresh</button></div><div id="lobbies-list" class="lobby-list">Loading…</div></section>
+</section>
+<section id="league-view" hidden><div class="league-heading"><div><button class="back" id="back-btn">All leagues</button><div class="overline" id="league-phase"></div><h1 id="league-title">League</h1><p id="league-meta" class="muted"></p></div><div class="invite"><div class="tiny">INVITE CODE</div><strong id="league-code">—</strong><button id="copy-link" class="btn secondary">Copy invite link</button></div></div><div id="league-content"></div></section>
+<section id="solo-view" hidden><div class="league-heading"><div><button class="back" id="solo-back">All leagues</button><div class="overline">162–0 / 151 CHALLENGE</div><h1>Solo Baseball Draft</h1><p class="muted">Roll a region and type, draft matching Pokémon, and place them on the diamond.</p></div><div><button id="solo-restart" class="btn secondary">New challenge</button></div></div><div id="solo-content"></div></section>
+</main>
+<details id="global-scout-guide" class="global-scout-guide panel" aria-label="Scouting and gameplay guide">
+  <summary class="guide-main-toggle"><span><b>Scouting guide</b><small>Positions, stamina, batting order & bench</small></span><span class="guide-arrow" aria-hidden="true">Expand guide</span></summary>
+  <div id="global-scout-content" class="global-scout-content"></div>
+</details>
+<footer>Unofficial Pokémon fan project. Pokémon names and artwork belong to their owners. Adapted from supplied JavaScript; the baseball ratings and backend are newly implemented.</footer></div>
+</body></html>

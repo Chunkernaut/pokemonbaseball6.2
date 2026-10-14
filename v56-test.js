@@ -1,0 +1,15 @@
+'use strict';
+const assert=require('node:assert/strict');const fs=require('node:fs');const B=require('./engine');const data=require('./public/pokemon-data.json');
+const app=fs.readFileSync('public/app.js','utf8'),css=fs.readFileSync('public/style.css','utf8'),server=fs.readFileSync('server.js','utf8');
+assert.match(server,/lineupDeadline=now\(\)\+90000/);
+assert.match(app,/function worldSeriesMarkup\(/);assert.match(app,/function scheduleWorldSeries\(/);assert.match(css,/\.world-series-stage\{border:3px solid/);
+assert.match(app,/playback\.speed===1000\?200/);assert.match(app,/if\(el\.id==='play-skip'\)/);
+assert.match(app,/function soloSwap\(/);assert.match(app,/wireField\('solo'\)/);assert.match(app,/sprite\.addEventListener\('dragstart'/);assert.match(app,/ev\.dataTransfer\.setDragImage\(sprite/);
+assert.match(app,/function soloLegendBlocked\(/);assert.match(app,/legend-locked/);assert.match(css,/\.pokemon-card\.legend-locked/);
+assert.match(app,/function saveRosterImage\(/);assert.match(app,/Save Image/);assert.match(app,/toBlob\(b=>b\?resolve\(b\)/);
+assert.match(css,/#141416/);assert.match(css,/#822f40/);assert.match(css,/#bd9956/);
+assert.equal(B.SLOTS.length,15);assert.equal(B.BENCH_SLOTS.length,5);
+const id=B.pool(data,'kanto',true).find(x=>data.leg.includes(x));assert.ok(id);
+let testRoster=Object.fromEntries(B.SLOTS.map((p,i)=>[p.id,10+i]));assert.ok(B.scoreTeam(data,testRoster));
+const season=B.singleSeason(data,testRoster,1243);assert.equal(season.games.length,162);
+console.log('PASS v5.6 compatibility: 90s lineup, sprite-only drag, solo swaps, Legendary gating, gold World Series, faster Fast playback, Save Image, neutral palette.');

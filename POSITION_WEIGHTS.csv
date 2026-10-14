@@ -1,0 +1,11 @@
+Position,HP%,Attack%,Defense%,Sp Attack%,Sp Defense%,Speed%,Height%,Weight%,TeamImportance%,TypeBonuses
+C,0,10,26,15,20,8,11,10,9.5,normal +2; poison +3; rock +3; steel +3; psychic +1; dragon +1; fairy +3
+1B,0,26,15,10,11,8,15,15,8.5,normal +3; fighting +1; ground +3; rock +2; steel +1; grass +3; ice +2
+2B,0,10,27,11,21,21,6,4,8.5,poison +1; bug +3; ghost +1; water +3; electric +3; psychic +3; fairy +2
+3B,0,23,26,12,15,12,7,5,8.5,fighting +1; poison +2; ground +1; rock +2; steel +2; fire +2; dark +2
+SS,0,9,30,10,20,24,5,2,11.0,flying +2; ground +2; bug +2; ghost +3; electric +1; psychic +2; dark +3
+LF,0,21,19,12,15,22,6,5,7.5,normal +2; flying +1; poison +3; bug +1; ghost +2; fire +2; grass +1; dark +2
+CF,0,10,26,12,17,29,4,2,10.0,flying +3; bug +2; water +1; electric +2; ice +3; dragon +3; fairy +2
+RF,0,25,22,12,14,17,6,4,7.5,flying +2; rock +2; steel +3; fire +2; water +3; grass +2; ice +1; dragon +1
+DH,0,38,5,13,10,23,6,5,9.0,normal +2; fighting +2; fire +3; grass +3; dragon +3; dark +1; fairy +1
+P,0,15,7,40,18,4,9,7,20.0,fighting +2; ground +1; ghost +1; water +1; electric +1; psychic +1; ice +1

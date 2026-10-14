@@ -1,0 +1,462 @@
+:root{--bg:#09151a;--panel:#14272e;--panel2:#18343a;--line:#31535a;--ink:#edf6f3;--mute:#a1babd;--mint:#93e8bb;--gold:#f4cd77;--red:#ff9586;--radius:13px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:radial-gradient(circle at top left,#17352f,transparent 42%),var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;margin:0;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}a{color:inherit}h1,h2,h3,h4,p{margin:0}h1{letter-spacing:-.055em;line-height:.97;font-size:clamp(2.8rem,6.6vw,5.5rem)}h2{font-size:1.42rem;letter-spacing:-.025em;margin-bottom:16px}h3{font-size:1.1rem}p{line-height:1.56}.max{max-width:1280px;margin:0 auto;padding:0 22px}.top{border-bottom:1px solid #45675a44;background:#091b1caa;position:sticky;top:0;z-index:30;backdrop-filter:blur(14px)}.header{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:68px}.logo{text-decoration:none;font-weight:900;letter-spacing:.05em;display:flex;gap:10px;align-items:center}.logo b{color:var(--mint)}.nav{display:flex;gap:8px;flex-wrap:wrap}.navbutton,.back{background:transparent;color:var(--mute);border:0;padding:10px 9px;font-size:.84rem}.navbutton:hover,.back:hover{color:white}.overline,.panel-tag,.tiny{color:var(--mint);font-size:.73rem;font-weight:800;letter-spacing:.14em}.tiny{font-size:.68rem;letter-spacing:.07em}.muted{color:var(--mute)}.intro{display:grid;grid-template-columns:1fr .4fr;gap:30px;padding:56px 10px 35px;align-items:center}.intro h1{margin:13px 0 22px}.intro h1 em{font-style:normal;color:var(--mint)}.intro p{max-width:640px;font-size:1.12rem;color:#c3d4d5;margin-bottom:22px}.ball{text-align:center;font-size:clamp(7rem,21vw,15rem);filter:drop-shadow(2px 25px 40px #0008);transform:rotate(-13deg)}.home-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:19px}.side-stack{display:flex;flex-direction:column;gap:19px}.panel{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(155deg,#192e35,#10252c);padding:24px;box-shadow:0 10px 35px #0002}.panel-tag{margin-bottom:8px;font-size:.68rem;color:#80bbaf}.panel p.muted{font-size:.9rem;margin-bottom:16px}form{display:grid;gap:15px}form label{font-size:.8rem;font-weight:700;color:#c9dfdf;display:grid;gap:7px}input,select{width:100%;border:1px solid #47636b;background:#0e2329;color:white;padding:11px 12px;border-radius:7px;outline:none;min-width:0}input:focus,select:focus{border-color:var(--mint)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.checkrow{padding:3px 0}.check{display:flex!important;align-items:center;gap:8px!important;font-weight:500!important}.check input{width:auto;accent-color:#8ee2b2}.smallhint{color:var(--mute);font-size:.78rem}.btn{font-size:.85rem;font-weight:750;border:1px solid #4d7274;padding:10px 15px;border-radius:8px;color:var(--ink);background:#234246}.btn:hover:not(:disabled){filter:brightness(1.17)}.btn.primary{background:#a2e9b9;color:#06231a;border-color:#a2e9b9}.btn.secondary{background:#254348}.btn.quiet{background:#15313a}.btn.danger{background:#522b30;border-color:#88545c}.btn.small{padding:6px 10px;font-size:.75rem}.wide{width:100%}.public-area{margin-top:22px}.sectionhead,.line-heading{display:flex;align-items:center;justify-content:space-between;gap:15px}.lobby-list{display:grid;gap:8px}.lobby-row{display:flex;align-items:center;justify-content:space-between;background:#0d2429;padding:11px 13px;border:1px solid #315058;border-radius:9px;gap:10px}.lobby-row span{font-size:.78rem;color:var(--mute)}.league-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin:26px 0}.league-heading h1{font-size:clamp(2.15rem,5vw,3.9rem);margin:12px 0 10px}.invite{border:1px solid #3e5f66;padding:15px;border-radius:12px;background:#10272f;display:grid;gap:8px;min-width:195px;text-align:center}.invite strong{font-size:1.7rem;letter-spacing:.16em}.league-shell{display:grid;grid-template-columns:minmax(0,1.44fr) minmax(315px,1fr);gap:18px}.panel.compact{padding:15px}.stack{display:grid;gap:16px}.toolbar{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-bottom:11px}.label{font-size:.77rem;font-weight:800;color:var(--mint);letter-spacing:.08em}.statusbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;margin-bottom:12px}.progress{font-size:.8rem;color:var(--mute)}.baggie{display:inline-flex;border-radius:6px;background:#315144;color:#dcffe9;padding:4px 9px;font-size:.74rem;font-weight:700}.baggie.warn{background:#64492a;color:#ffe1a1}.baggie.shiny{background:#6f527a;color:#ffe9ff}.field{position:relative;aspect-ratio:960/720;border:1px solid #39554a;border-radius:12px;overflow:hidden;background:#08382c}.field>svg{display:block;width:100%;height:100%}.field-spots{position:absolute;inset:0}.field-spot{position:absolute;transform:translate(-50%,-50%);width:13.1%;height:14.5%;background:#0c2933dc;color:white;border:1px dashed #8aafa8;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:3px 2px;user-select:none;touch-action:pan-y;box-shadow:0 4px 12px #0006}.field-spot:hover{border-color:white}.field-spot.filled{border-style:solid;border-color:#8cceb8;background:#09232ddd}.field-spot.selected{outline:3px solid var(--gold);z-index:7}.field-spot .sprite{width:92%;height:62%;position:absolute;bottom:25px;object-fit:contain;image-rendering:pixelated;pointer-events:none}.field-spot .spot-pos{background:#153e39;padding:1px 5px;border-radius:4px;color:#aff5c9;font-size:.71rem;font-weight:900}.field-spot .spot-name{width:100%;font-size:.63rem;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-weight:700}.field-spot .spot-score{font-size:.58rem;color:#ffd992}.field-spot.empty:before{content:'+';font-size:24px;position:absolute;top:16px;color:#81bba7}.info{margin:12px 0 0;color:var(--mute);font-size:.79rem;line-height:1.5}.roster-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:14px}.slot-row{display:flex;justify-content:space-between;gap:5px;align-items:center;background:#0a2229;border:1px solid #315058;padding:7px 8px;border-radius:6px;font-size:.76rem}.slot-row strong{color:var(--mint)}.slot-row span{max-width:73%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pokemon-pool{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;max-height:450px;overflow:auto;padding:2px}.pokemon-card{display:flex;align-items:center;text-align:left;background:#102b32;border:1px solid #3a585f;color:white;border-radius:9px;padding:7px;gap:7px;min-width:0}.pokemon-card:hover,.pokemon-card.active{border-color:var(--gold);background:#264238}.pokemon-card img,.small-sprite{width:55px;height:55px;object-fit:contain;image-rendering:pixelated}.pokemon-card .nm{font-size:.8rem;font-weight:850;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}.pokemon-card .s{font-size:.64rem;color:var(--mute)}.pokemon-card .score{font-size:.72rem;color:var(--gold);font-weight:800}.pool-controls{display:grid;grid-template-columns:1fr 115px;gap:8px;margin:12px 0}.pool-controls input,.pool-controls select{font-size:.77rem}.paging{display:flex;justify-content:space-between;align-items:center;margin-top:10px;color:var(--mute);font-size:.75rem}.selected-card{padding:12px;border:1px solid #7cae83;background:#173a36;border-radius:8px;font-size:.8rem;margin-bottom:12px}.small-stat{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:10px}.small-stat span{font-size:.67rem;background:#102b31;padding:6px 5px;border-radius:6px;text-align:center}.small-stat strong{display:block;font-size:.96rem;color:#f5d285}.league-seats{display:grid;gap:8px}.seat{display:flex;gap:10px;align-items:center;background:#102a32;padding:11px;border:1px solid #385e61;border-radius:8px}.seat .number{font-weight:900;color:var(--mint);font-size:1.2rem;width:26px}.seat .mid{flex:1}.seat small{color:var(--mute)}.seat .seat-tools{display:flex;gap:5px}.lobby-two{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.chat-log{display:flex;flex-direction:column;gap:8px;max-height:260px;overflow-y:auto;background:#0b232a;padding:11px;border-radius:8px;border:1px solid #315059;min-height:135px}.chat-line{font-size:.79rem;line-height:1.5;overflow-wrap:anywhere}.chat-line b{color:var(--mint)}.chat-line.system{font-style:italic;color:#a9c8c5}.chat-input{display:flex;gap:6px;margin-top:10px}.chat-input input{flex:1}.screen-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat-table,.games-table{width:100%;border-collapse:collapse;font-size:.82rem}.stat-table th,.stat-table td,.games-table td,.games-table th{padding:9px 7px;border-bottom:1px solid #325056;text-align:left}.stat-table th,.games-table th{color:var(--mint)}.stat-table td.num,.games-table td.num{text-align:right}.team-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}.champion{padding:20px;border:1px solid #a9925e;background:linear-gradient(120deg,#594c24,#1d3e3c);border-radius:12px;margin-bottom:15px}.champion h2{margin:6px 0;color:#ffe0a0}.score-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:13px}.scorecard{text-align:center;background:#0d2a32;border:1px solid #3b5b63;border-radius:9px;padding:10px}.scorecard b{display:block;font-size:1.25rem;color:var(--gold)}.scorecard span{color:var(--mute);font-size:.73rem}.challenge-box{background:#113138;padding:14px;border-radius:9px;border:1px solid #39696b}.choice-list{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin:10px 0}.notice{color:#f7db91;font-size:.82rem;margin:8px 0}.hintline{font-size:.75rem;color:var(--mute)}.types{font-size:.69rem;color:#a4d6cf}.hidden{display:none!important}[hidden]{display:none!important}#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:80;max-width:90vw;min-width:270px;background:#25463e;color:white;border:1px solid #81c4a9;border-radius:10px;padding:13px 20px;text-align:center;box-shadow:0 7px 30px #0008;display:none}#toast.show{display:block}footer{padding:35px 0 26px;color:#779a9d;font-size:.73rem;text-align:center}@media(max-width:850px){.home-grid,.league-shell,.lobby-two{grid-template-columns:1fr}.intro{grid-template-columns:1fr .25fr}.ball{font-size:6rem}.league-heading{align-items:start}.invite{min-width:160px}.league-shell{gap:13px}}@media(max-width:570px){.max{padding:0 12px}.header{flex-wrap:wrap;padding-top:9px;padding-bottom:9px}.logo{font-size:.87rem}.nav{gap:0}.navbutton{padding:8px;font-size:.75rem}.intro{padding:30px 0 20px;grid-template-columns:1fr}.ball{display:none}.panel{padding:16px}.form-row{gap:8px}.league-heading{flex-direction:column;gap:14px}.invite{display:flex;align-items:center;text-align:left;gap:10px;width:100%}.invite strong{flex:1;font-size:1.35rem}.invite .tiny{display:none}.pokemon-card{padding:5px}.pokemon-card img{width:43px;height:43px}.field-spot{width:15%;height:14%;padding:1px}.field-spot .sprite{height:54%;bottom:21px}.field-spot .spot-pos{font-size:.6rem;padding:0 3px}.field-spot .spot-name{font-size:.52rem}.field-spot .spot-score{font-size:.49rem}.score-cards{gap:4px}.scorecard{padding:7px}.scorecard b{font-size:1rem}.roster-grid{gap:4px}.slot-row{font-size:.68rem;padding:6px}.champion{padding:14px}}
+
+/* v2: a baseball scouting dashboard, not a replica of All-22. */
+:root{--mint:#f4b35a;--gold:#ffc66c;--line:#34484b;--panel:#1a282e}body{background:radial-gradient(ellipse at 80% -8%,#34463d 0%,transparent 40%),#0d171d}.top{background:#101c20f2;border-color:#a47e5455}.logo b,.intro h1 em{color:#f5b35a}.panel{background:linear-gradient(148deg,#1d2c30,#152329);border-color:#3a4b50;box-shadow:0 8px 28px #0004}.primary{background:#f0a948!important;color:#1e211f!important;border-color:#fbc67a!important}.btn.primary:hover{background:#ffc56b!important}.pokemon-pool.full-list{height:550px;max-height:65vh;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:#e7a24e #17282c}.pokemon-card[aria-disabled="true"]{opacity:.78;cursor:help}.pokemon-card[aria-disabled="true"]:hover{opacity:1}.pokemon-card[data-inspect],.field-spot[data-inspect],.slot-row[data-inspect],.stat-table tr[data-inspect]{cursor:help}.pokemon-card img{image-rendering:pixelated}#pokemon-inspector{position:fixed;right:16px;top:82px;z-index:90;width:min(360px,calc(100vw - 24px));max-height:calc(100vh - 96px);overflow:auto;pointer-events:none;background:#111d25f5;color:#faf1e3;border:1px solid #ddab72;border-radius:14px;padding:15px;box-shadow:0 20px 50px #000b}#pokemon-inspector[hidden]{display:none}#pokemon-inspector .inspector-heading{display:flex;align-items:center;gap:10px;border-bottom:1px solid #3d5053;padding-bottom:10px;margin-bottom:10px}#pokemon-inspector .inspector-heading img{width:58px;height:58px;image-rendering:pixelated}#pokemon-inspector .inspector-heading b{display:block;font-size:1.1rem}#pokemon-inspector .inspector-heading small{color:#d4c2ae}#pokemon-inspector .inspector-bottom{font-size:.68rem;color:#93a8a7;margin-top:9px}.full-stats{margin:10px 0}.full-stats>b,.mini-fits>b{font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:#f6bc70;display:block;margin:7px 0}.stat-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.stat-tiles>div{padding:6px;background:#24343b;border:1px solid #405358;border-radius:6px;text-align:center}.stat-tiles small{display:block;color:#c2cfca;font-size:.7rem}.stat-tiles strong{display:block;font-size:1.05rem}.physical{display:grid;gap:3px;margin:10px 0;font-size:.74rem;color:#b7cdca}.physical b{color:#f2ebdc}.mini-fits>div{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}.mini-fits span{font-size:.67rem;padding:5px 2px;background:#23343c;border-radius:4px;text-align:center}.mini-fits strong{color:#f5be79}.selected-head{display:flex;align-items:center;gap:8px}.selected-head img{width:55px;height:55px;image-rendering:pixelated}.selected-head b{display:block}.selected-head .types{display:block}.formula-scroll{max-width:100%;overflow:auto;margin:12px 0}.formula-scroll .stat-table{min-width:740px;font-size:.73rem}.formula-scroll .stat-table td{font-size:.72rem;white-space:nowrap}.formula-scroll .stat-table th{white-space:nowrap}.game-scroll{max-height:480px;overflow:auto;margin:12px 0}.game-scroll .games-table td{font-size:.8rem}.solo-search{width:100%;background:#0e1d22;border:1px solid #416064;padding:12px;color:white;border-radius:8px;margin-top:12px}summary{cursor:pointer;color:#ffcc87;font-weight:700;padding:9px 0}details{margin-top:10px}.selected-card .small-stat{margin:10px 0}@media(max-width:900px){#pokemon-inspector{top:auto;bottom:10px;right:10px;width:min(340px,calc(100vw - 20px));max-height:min(62vh,420px)}}
+
+/* v3 layout: readable, larger diamond; bench sits immediately beneath it. */
+.max{max-width:1550px}
+.league-shell{grid-template-columns:minmax(0,1.72fr) minmax(360px,.88fr);align-items:start;gap:22px}
+.league-shell>.stack,.draft-aside,.draft-main{min-width:0;align-self:start}
+.stack{display:flex;flex-direction:column;gap:18px;align-items:stretch}
+.panel{min-width:0}
+.draft-layout{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(320px,.8fr);gap:22px;align-items:start}
+.draft-aside{display:flex;flex-direction:column;gap:18px}
+.draft-main .panel,.league-shell>.stack>.panel:first-child{padding:20px}
+.field-and-bench{max-width:1060px;margin:0 auto 8px;min-width:0}
+.field{width:100%;aspect-ratio:960/720;overflow:hidden}
+.field-spot{width:14%;height:15%;min-width:0;z-index:1;transition:border-color .15s,transform .15s}
+.field-spot:hover{z-index:4;transform:translate(-50%,-50%) scale(1.07)}
+.field-spot .sprite{height:66%;bottom:21px}
+.field-spot .spot-name{font-size:clamp(.53rem,.85vw,.79rem);max-width:100%}
+.field-spot .spot-pos{font-size:clamp(.56rem,.79vw,.78rem)}
+.bench-wrap{margin-top:12px;padding:14px;border:1px solid #405c60;border-radius:12px;background:#111e24}
+.bench-title{font-size:.75rem;font-weight:850;letter-spacing:.12em;color:var(--gold);margin-bottom:10px}
+.bench-line{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.bench-spot{border-radius:10px;border:1px dashed #748f93;min-width:0;min-height:130px;background:#102a2d;color:#eff9f2;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:8px 4px;gap:2px}
+.bench-spot.filled{border-style:solid;border-color:#77a897}
+.bench-spot:hover,.bench-spot.selected{border-color:var(--gold);background:#203e3b}
+.bench-spot img{width:100%;max-width:100px;height:75px;object-fit:contain;image-rendering:pixelated}
+.bench-spot strong{color:var(--gold);font-size:.82rem}
+.bench-spot span{font-size:.78rem;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.type-badges{display:inline-flex;flex-wrap:wrap;gap:4px;align-items:center}
+.type-badge{display:inline-block;border-radius:5px;padding:3px 7px;background:#5a6970;color:#fff;border:1px solid #ffffff29;letter-spacing:.025em;font-weight:750;font-size:.64rem;line-height:1.3}
+.type-normal{background:#858c91}.type-fighting{background:#b64748}.type-flying{background:#678ac6}.type-poison{background:#935bb4}.type-ground{background:#ac7d42}.type-rock{background:#867a53}.type-bug{background:#739b27}.type-ghost{background:#615496}.type-steel{background:#628c9b}.type-fire{background:#d66b33}.type-water{background:#397fce}.type-grass{background:#4a9b59}.type-electric{background:#bd9531;color:#1b1c20}.type-psychic{background:#c35a87}.type-ice{background:#499eb2}.type-dragon{background:#6659ba}.type-dark{background:#514a57}.type-fairy{background:#c477af}
+.selected-card .physical{gap:7px}
+.pokemon-card .type-badges{margin-top:4px}
+.pokemon-card{min-height:86px}
+/* No converted baseball attribute widgets or individual fits in the scouting panels. */
+.small-stat,.mini-fits,.spot-score{display:none!important}
+.results-full{display:flex;flex-direction:column;gap:20px;min-width:0}
+.results-full .panel{padding:24px}
+.results-full .large-field{width:min(100%,1000px);margin:12px auto 20px}
+.results-full h2{margin-bottom:14px}
+.results-full .stat-results{width:100%;max-width:100%;min-width:0}
+.table-viewport{max-width:100%;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0 20px}
+.table-viewport .stat-table{min-width:940px;width:100%}
+.table-viewport .stat-table th,.table-viewport .stat-table td{white-space:nowrap;padding:11px 13px}
+.table-viewport .stat-table td:first-child{position:sticky;left:0;background:#15252a;z-index:1}
+.season-final{margin-top:24px}
+.playback-panel{margin-top:22px;margin-bottom:22px;padding:26px}
+.playback-controls{padding:12px 0 16px}
+.progress-track{height:9px;background:#30454b;border-radius:20px;overflow:hidden;margin:8px 0 12px}
+.progress-bar{height:100%;background:linear-gradient(90deg,#eeb168,#7bc5a8);transition:width .25s}
+.playback-controls .toolbar{margin:0;gap:8px}
+.game-recap{background:#10282c;border:1px solid #355a59;padding:23px;border-radius:13px;margin-bottom:16px}
+.game-scoreline{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;text-align:center;min-height:90px}
+.game-scoreline strong{color:var(--gold);font-size:clamp(1.6rem,3vw,2.6rem);white-space:nowrap}
+.game-scoreline span{font-size:clamp(.86rem,1.25vw,1.2rem);font-weight:750}
+.game-scoreline .win{color:#9ae2b5}.game-scoreline .loss{color:#eb9887}
+.fatigue-card{margin:16px 0 4px;background:#18353a;border:1px solid #40605e;border-radius:9px;padding:14px}
+.fatigue-card h3{font-size:1rem;margin-bottom:7px}
+.fatigue-duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.fatigue-duo>div{min-width:0}
+.fatigue-duo .fatigue-card{height:calc(100% - 24px)}
+#pokemon-inspector{width:min(370px,calc(100vw - 24px));box-shadow:0 14px 50px #000c}
+@media(max-width:1050px){.draft-layout,.league-shell{grid-template-columns:minmax(0,1fr)}.draft-aside{display:grid;grid-template-columns:1fr 1.3fr;align-items:start}.draft-aside>*{min-width:0}}
+@media(max-width:720px){.max{padding:0 12px}.draft-aside{display:flex}.field-spot{width:15%;height:15%}.field-spot .spot-name{font-size:.55rem}.field-spot .sprite{height:58%}.bench-line{gap:5px}.bench-spot{min-height:100px;padding:4px 2px}.bench-spot img{height:55px}.bench-spot span{font-size:.57rem}.bench-spot strong{font-size:.64rem}.bench-title{font-size:.63rem}.fatigue-duo{grid-template-columns:1fr}.game-scoreline{gap:5px}.game-recap{padding:13px}.playback-panel{padding:15px}.results-full .panel{padding:15px}.scorecard span{font-size:.63rem}}
+
+/* v4 identity — bright scoreboards, ballpark pennant accents, no generated artwork. */
+:root{--bg:#101523;--panel:#1b2237;--panel2:#212d47;--line:#536079;--ink:#f7f4ef;--mute:#b7c2d7;--mint:#79d8e8;--gold:#ffca6b;--red:#ff829c}
+body{background:radial-gradient(ellipse 70% 45% at 8% 0%,#403a70 0%,transparent 64%),radial-gradient(ellipse 55% 45% at 98% 19%,#184d6b 0%,transparent 72%),linear-gradient(160deg,#111727,#151b2f 55%,#221c31);background-attachment:fixed}
+.top{background:#141b30ee;border-bottom:2px solid #e7a85855}
+.logo{color:#fff}.logo b,.intro h1 em{color:#ffba5e}
+.intro .overline,.panel-tag{color:#8de2f3}
+.panel{background:linear-gradient(150deg,#202d46 0%,#1a253a 46%,#25243a 100%);border:1px solid #65728b80;box-shadow:0 14px 30px #04071455}
+.panel:nth-child(3n+2){border-top-color:#e7a75a9e}.panel:nth-child(3n+3){border-top-color:#96d5ed88}
+.btn.primary,.primary{background:linear-gradient(110deg,#ffc669,#ff9f6c)!important;color:#262133!important;border:1px solid #ffd99c!important}
+.btn.secondary{background:#374564;color:#eef7ff;border-color:#6a81a2}.btn.quiet{background:#273552;color:#d5e6f0}
+input,select,.solo-search{background:#111c33;border-color:#7184a2;color:#fcfcff}
+input:focus,select:focus{border-color:#ffd28a;box-shadow:0 0 0 2px #f9b66a30}
+.pokemon-card{background:#192a42;border-color:#526987}.pokemon-card:hover,.pokemon-card.active{background:#35405f;border-color:#ffca79}
+.pokemon-pool.full-list{scrollbar-color:#fbaf63 #25314b}
+.baggie,.progress{color:#ffe0a3}
+.scorecard{background:linear-gradient(150deg,#223755,#272841);border-color:#587490}
+.bench-wrap{background:#192841;border:1px solid #536d91}
+.bench-spot{background:linear-gradient(#243a54,#1a2b45);border-color:#7b95b1}
+.bench-spot.filled{border-color:#8fbad1}
+.bench-spot:hover,.bench-spot.selected{background:#344563;border-color:#ffca79}
+.chat-log{background:#111b30;border-color:#526683}
+.stat-table td,.stat-table th,.games-table td{border-color:#5161808c}
+.table-viewport .stat-table td:first-child{background:#232a3e}
+/* Removed opaque player boxes; each Pokémon floats over the field with a position tag. */
+.field-spot.filled{background:transparent!important;border:0!important;box-shadow:none!important;outline:none!important;overflow:visible}
+.field-spot.filled .spot-name{display:none!important}
+.field-spot.filled .spot-pos{background:#111a2cc9;color:#ffe2a1;border:1px solid #ffe0a15c;box-shadow:0 2px 6px #071019;position:absolute;bottom:0;font-size:clamp(.65rem,1.1vw,.9rem);border-radius:9px;padding:3px 8px}
+.field-spot.filled .sprite{height:78%;width:100%;bottom:22px;filter:drop-shadow(0 7px 4px #07151d95)}
+.field-spot.filled.selected{filter:drop-shadow(0 0 8px #ffcc67)}
+.field-spot.filled:hover{filter:drop-shadow(0 0 10px #ffe1a0)}
+.field-spot.empty{background:#15273588;border-color:#b8d0d6a0}
+/* Responsive draft order / glowing active seat */
+.on-clock{border:2px solid #ffe08f!important;animation:on-clock-pulse 2.2s ease-in-out infinite;box-shadow:0 0 0 1px #ffce7f66,0 0 35px #ffa95255!important}
+.turn-flash{font-weight:950;letter-spacing:.08em;color:#24233a;text-align:center;padding:13px 10px;margin:12px 0;border-radius:10px;background:linear-gradient(90deg,#ffe38a,#ff9e77,#ffe4a1);animation:turn-glimmer 2s ease-in-out infinite}
+@keyframes on-clock-pulse{50%{box-shadow:0 0 0 2px #ffce7faa,0 0 45px #ffc67280}}
+@keyframes turn-glimmer{50%{filter:brightness(1.12)}}
+.order-heading{font-size:.78rem;font-weight:900;letter-spacing:.07em;margin:14px 0 8px;color:#93e5f7;text-transform:uppercase}
+.order-list,.order-scroll{display:grid;gap:4px}.order-scroll{max-height:340px;overflow:auto;margin-top:10px}
+.order-entry{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:10px;padding:9px 10px;background:#151f34;border:1px solid #475b7a;border-radius:8px;font-size:.78rem;min-width:0}
+.order-entry>span:nth-child(2){overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.order-entry small{color:#adc5d8}.order-num{font-weight:900;color:#ffe5ad}
+.order-entry.now{background:#53413b;border:1px solid #ffcf84;box-shadow:inset 3px 0 0 #ffce78}
+.order-entry.picked{opacity:.55}
+.order-all summary{font-size:.78rem}
+.guide-footer{margin-top:24px}.guide-footer .panel{background:linear-gradient(125deg,#292a47,#1a3350)}
+/* Event plaques and temporary victorious-score glow. */
+.special-moments{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0}
+.special-moment{min-width:min(100%,240px);flex:1;display:flex;align-items:center;gap:10px;border-radius:10px;border:1px solid #e3b66d80;padding:12px;background:linear-gradient(130deg,#453350,#263552);animation:event-rise .35s ease-out}
+.special-moment b{display:block;color:#ffe0a8;letter-spacing:.06em;font-size:.83rem}
+.special-moment small{display:block;color:#c3d6e5;font-size:.74rem;margin-top:2px}
+.event-icon{font-size:1.55rem}
+.event-no_hitter{border-color:#9ce4f1;background:linear-gradient(130deg,#1c4e6a,#303c69)}
+.event-walkoff{border-color:#ffbd9c;background:linear-gradient(120deg,#61343c,#633f56)}
+.event-comeback{border-color:#bbd4fb}.event-grand_slam{border-color:#ffb86a}
+.game-recap{background:linear-gradient(125deg,#253f5b,#242743);border-color:#657d9a}
+.walkoff-score{color:#ffe5a0!important;text-shadow:0 0 8px #ffb769,0 0 22px #fb6e61,0 0 34px #f57957;animation:score-pop .8s ease-in-out 3}
+.nohit-player{display:inline-flex;align-items:center;gap:5px;font-size:.7rem!important;color:#ace8fa;margin-left:9px;vertical-align:middle}
+.nohit-player img{height:45px;width:45px;image-rendering:pixelated}
+@keyframes event-rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes score-pop{50%{filter:brightness(1.4)}}
+/* Champion, series record and chat at the top; rosters and stats stacked below. */
+.championship-top{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(310px,.8fr);gap:20px;align-items:start;margin-bottom:22px}
+.championship-top>*{min-width:0;max-width:100%;margin:0}
+.champion-v4{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:230px;background:radial-gradient(circle at 50% 0%,#766241 0%,transparent 55%),linear-gradient(135deg,#392e51,#384967);border:2px solid #ffc776;box-shadow:0 12px 40px #0006}
+.champion-v4 h2{font-size:clamp(1.7rem,3vw,3rem);color:#ffdb86}.series-record{font-size:clamp(2.4rem,4vw,4.4rem);font-weight:950;color:white;text-shadow:0 4px 15px #14111e}
+.champion-v4 p{margin:4px 0;color:#e4e8f1}
+.results-full .panel{max-width:100%}
+@media(max-width:1050px){.championship-top{grid-template-columns:1fr}.championship-top .panel{width:100%}}
+@media(max-width:720px){.order-entry{grid-template-columns:32px minmax(0,1fr);gap:6px}.order-entry small{grid-column:2}.turn-flash{font-size:.75rem}.field-spot.filled .sprite{height:74%;bottom:16px}.field-spot.filled .spot-pos{font-size:.56rem;padding:1px 4px}.champion-v4{min-height:190px}.special-moment{min-width:100%}}
+@media(prefers-reduced-motion:reduce){.on-clock,.turn-flash,.walkoff-score,.special-moment{animation:none!important}}
+.extras-head{font-size:.86rem;letter-spacing:.17em;font-weight:900;color:#92e3f4;margin:9px 0 12px;text-align:center;text-shadow:0 0 10px #73c5dd55}
+
+/* v5: Navy ballpark dashboard, short controls, responsive horizontal turn strip. */
+:root{--bg:#070f22;--panel:#101e3a;--panel2:#162647;--line:#394e77;--ink:#f6f8ff;--mute:#bbcae2;--mint:#ffffff;--gold:#ffcd56;--red:#ff6077}
+html{scroll-behavior:auto}
+body{color:#f6f8ff;background:radial-gradient(ellipse 64% 39% at 85% 0%,#1d3057 0%,transparent 74%),linear-gradient(145deg,#070f23 5%,#101b34 60%,#111a31 100%);background-attachment:fixed}
+.top{background:#081329ed;border-bottom:1px solid #46577b;position:sticky;top:0;z-index:35}
+.header{min-height:48px;padding-top:5px;padding-bottom:5px}
+.logo b,.intro h1 em{color:#ffcd56}
+.navbutton{font-size:.76rem;padding:7px 11px;color:#f2f6ff}
+.max{max-width:1640px;padding-left:18px;padding-right:18px}
+.panel,.panel:nth-child(3n+2),.panel:nth-child(3n+3){background:linear-gradient(150deg,#15243e,#101c33);border:1px solid #43597d;box-shadow:0 7px 19px #050a1b55}
+.panel.compact{padding:13px}
+.panel-tag,.overline{color:#ffdc79!important}
+.btn.primary,.primary{background:#e34456!important;border:1px solid #ff7180!important;color:#fff!important}
+.btn.primary:hover{background:#fc5869!important}
+.btn.secondary{background:#f5c64b!important;border:1px solid #ffdd74!important;color:#101a2d!important}
+.btn.secondary:hover{background:#ffdc71!important}
+.btn.quiet{background:#1d3152!important;border:1px solid #56719d!important;color:#f4f7ff!important}
+.btn{font-weight:800;box-shadow:none!important}
+.btn.small{padding:6px 10px;font-size:.74rem}
+input,select,.solo-search{background:#0b1830!important;border-color:#526b96!important;color:#f9fbff!important}
+input:focus,select:focus{border-color:#ffcf5a!important}
+.intro{padding:20px 8px 14px;min-height:0}.intro h1{font-size:clamp(2.15rem,4vw,3.25rem);margin:5px 0}.intro p{max-width:650px;font-size:.88rem;line-height:1.45}.intro .ball{font-size:6rem}
+.home-grid{gap:12px}.home-grid .panel{padding:15px}.home-grid h2{font-size:1.15rem;margin:5px 0 10px}.side-stack{gap:12px}.home-grid label{font-size:.78rem}.form-row{gap:9px}.form-row select,.form-row input{padding:9px}
+.league-heading{padding-top:12px;padding-bottom:9px;gap:12px;align-items:center}.league-heading h1{font-size:clamp(1.45rem,2.2vw,2rem);margin:2px 0}.league-heading p{font-size:.77rem;margin:3px 0}.league-heading .overline{font-size:.67rem}.league-heading .back{font-size:.76rem}.invite{padding:7px 12px}.invite strong{font-size:1.2rem}.invite .tiny{font-size:.58rem}
+.draft-page{display:flex;flex-direction:column;gap:11px}
+.draft-top-bar{padding:11px 15px!important;margin:0!important;min-width:0}
+.draft-turn-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.turn-main{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;min-width:0}
+.turn-main b{font-size:1rem;color:#fff}.turn-main span{font-size:.77rem;color:#d1def2}
+.turn-clock{white-space:nowrap;padding:8px 12px;border-radius:8px;background:#24365a;border:1px solid #6c82ae;color:#ffe480;font-weight:950;font-variant-numeric:tabular-nums}
+.turn-clock.warn{background:#5e293c;border-color:#ff6c7d;color:white}
+.draft-top-bar.on-clock{border:2px solid #ffcc58!important;background:linear-gradient(130deg,#272849,#132f53)!important;animation:turn-top-glow 2.2s ease-in-out infinite}
+@keyframes turn-top-glow{50%{box-shadow:0 0 0 2px #f3c54a44,0 0 22px #f0ce4255!important}}
+.draft-order-toggle{margin:5px 0 0!important}
+.draft-order-toggle summary{display:flex;align-items:center;gap:11px;font-size:.75rem;font-weight:800;padding:5px 0 2px;cursor:pointer;color:#ffcf67;list-style:none}
+.draft-order-toggle summary::-webkit-details-marker{display:none}
+.order-mini{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.72rem;color:#dfecfa;font-weight:500}
+.order-toggle-label{font-size:.7rem;color:#f5c54f;border:1px solid #78683d;border-radius:5px;padding:3px 7px}
+.order-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:5px;margin-top:9px;max-height:180px;overflow:auto;padding:3px}
+.order-entry{display:grid;grid-template-columns:32px minmax(0,1fr);gap:3px 7px;padding:5px 7px;font-size:.69rem;background:#142949;border-color:#445a83}
+.order-entry small{grid-column:2;font-size:.61rem}
+.order-entry.now{background:#4b3048;border-color:#fbc954}
+.league-shell.draft-workspace{display:grid;grid-template-columns:minmax(0,1.44fr) minmax(340px,1fr);gap:12px;align-items:start}
+.draft-workspace>.stack{min-width:0;gap:12px}
+.draft-field-panel{padding:11px 13px!important}
+.field-and-bench{width:min(100%,max(390px,calc(133.333vh - 407px)));max-width:790px;margin:0 auto 5px}
+.field{background:#0b3540}
+.score-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:7px 0}
+.scorecard{padding:5px 4px;background:#142b4b;border:1px solid #4c648a}
+.scorecard b{font-size:clamp(.85rem,1.4vw,1.12rem)}.scorecard span{font-size:.59rem;color:#d2dded}
+.scorecard + .hintline{margin:0}
+.draft-field-panel .hintline{font-size:.65rem}
+.statusbar{margin-bottom:5px}
+.statusbar .label{font-size:.75rem}
+.draft-workspace .field-spot .sprite{height:76%;bottom:20px}
+.draft-workspace .field-spot .spot-pos{font-size:clamp(.57rem,.9vw,.72rem)}
+.bench-wrap{margin-top:6px;padding:7px 9px;background:#102744;border-color:#3e6889}
+.bench-title{font-size:.6rem;margin-bottom:5px;color:#ffce64}
+.bench-line{gap:6px}
+.bench-spot{min-height:73px;padding:3px;gap:0;background:#1a3154;border-color:#536a91}
+.bench-spot img{height:41px;max-width:70px}
+.bench-spot strong{font-size:.64rem}.bench-spot span{font-size:.6rem}
+.roster-grid{gap:4px}.slot-row{padding:5px 7px;font-size:.68rem;background:#112847;border-color:#364f79}
+.compact-instruction{font-size:.72rem;margin:6px 0}
+.draft-workspace .pokemon-pool.full-list{height:auto;max-height:calc(100vh - 298px);min-height:280px;overflow-y:auto;scrollbar-color:#efc24f #111f3d;overscroll-behavior:contain}
+.pool-panel{padding:11px!important}
+.pool-controls{gap:5px;margin:8px 0}
+.pool-controls input,.pool-controls select{font-size:.73rem;padding:8px}
+.pokemon-pool{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.pokemon-tile{position:relative;border-radius:8px;min-width:0;border:1px solid #455a7c;background:#142746}
+.pokemon-tile.active{border-color:#ffe28e;background:#253c62}
+.pokemon-tile.is-favorite{border-color:#e7be4c}
+.pokemon-tile .pokemon-card{width:100%;border:0!important;background:transparent!important;padding:5px 29px 5px 5px;min-height:60px;gap:4px;cursor:pointer;text-align:left}
+.pokemon-tile .pokemon-card img{width:43px;height:43px}
+.pokemon-tile .pokemon-card .nm{font-size:.74rem}
+.pokemon-tile .pokemon-card .score{font-size:.65rem}
+.pokemon-tile .type-badge{font-size:.49rem;padding:2px 4px}
+.favorite-toggle{position:absolute;top:3px;right:3px;background:#253956;color:#e5e9f4;border:1px solid #536581;border-radius:7px;font-size:1.15rem;width:25px;height:28px;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0}
+.favorite-toggle[aria-pressed="true"]{color:#ffcd4f;background:#504329;border-color:#d5aa40}
+.favorite-toggle:hover{background:#514568}
+.draft-lower{display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:12px}
+.guide-footer{margin-top:6px}.guide-footer .panel{background:linear-gradient(130deg,#182b4b,#131f3c)}
+.past-area{margin-top:14px;padding:15px!important}.past-area h2{font-size:1.15rem;margin:5px 0}
+.past-leagues{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:7px}
+.past-row{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#102441;border:1px solid #3d567e;border-radius:8px;padding:8px}
+.past-row b,.past-row small{display:block}.past-row small{font-size:.65rem;color:#becee2}
+.solo-workspace{grid-template-columns:minmax(0,1.44fr) minmax(330px,1fr);gap:12px}
+.solo-workspace .draft-aside{gap:10px}
+.solo-workspace .panel{padding:11px!important}
+.solo-workspace .field-and-bench{width:min(100%,max(390px,calc(133.333vh - 373px)));max-width:790px}
+.solo-workspace .pokemon-pool{max-height:calc(100vh - 400px)!important;min-height:210px}
+.solo-workspace .pokemon-card{min-height:56px}
+.solo-workspace .pokemon-card img{width:43px;height:43px}
+.solo-workspace h2{font-size:1rem;margin:5px 0}
+.solo-workspace .solo-search{padding:8px}
+.solo-workspace .info{font-size:.75rem;margin:7px 0}
+.selected-card{background:#112b50;border-color:#5975a7;padding:8px;margin:5px 0}
+.stat-tiles>div{background:#182f51;border-color:#4c6285}
+.selected-head img{width:44px;height:44px}
+@media(min-width:1080px) and (max-height:760px){.field-and-bench,.solo-workspace .field-and-bench{width:min(100%,max(390px,calc(133.333vh - 380px)))}.scorecard{padding:3px}.bench-spot{min-height:60px}.bench-spot img{height:31px}.roster-grid{display:none}}
+@media(max-width:1100px){.league-shell.draft-workspace,.solo-workspace{grid-template-columns:minmax(0,1.2fr) minmax(300px,1fr)}.draft-workspace .pokemon-pool.full-list{max-height:65vh}}
+@media(max-width:830px){.league-shell.draft-workspace,.solo-workspace,.draft-lower{grid-template-columns:1fr}.field-and-bench,.solo-workspace .field-and-bench{width:min(100%,780px)}.draft-workspace .pokemon-pool.full-list{max-height:45vh}.solo-workspace .pokemon-pool{max-height:42vh!important}.draft-top-bar{padding:8px!important}.league-heading{align-items:start}}
+@media(max-width:570px){.max{padding-left:9px;padding-right:9px}.header{padding:4px 0}.panel.compact{padding:9px}.field-spot.filled .sprite{bottom:14px}.bench-spot{min-height:65px}.bench-spot img{height:35px}.bench-spot span{font-size:.48rem}.scorecard span{font-size:.49rem}.scorecard b{font-size:.9rem}.pokemon-pool{grid-template-columns:repeat(2,minmax(0,1fr))}.pokemon-tile .pokemon-card img{width:35px;height:35px}.draft-turn-row{align-items:start}.order-mini{display:none}.turn-main span{font-size:.67rem}.turn-clock{font-size:.72rem;padding:6px}.league-heading{gap:5px}.invite{width:100%}}
+@media(prefers-reduced-motion:reduce){.draft-top-bar.on-clock{animation:none}}
+
+/* v5.5: compact lobby invite, game moment attribution, top-of-page solo results. */
+#league-view .league-heading{display:flex;justify-content:space-between;align-items:center;gap:20px}
+#league-view .league-heading .invite{margin-left:auto;max-width:180px;min-width:0!important;flex:0 0 auto;align-self:center;text-align:right;padding:7px 9px;gap:4px}
+#league-view .league-heading .invite strong{font-size:1.04rem!important;line-height:1.1;letter-spacing:.08em}
+#league-view .league-heading .invite .tiny{font-size:.55rem}
+#league-view .league-heading .invite .btn{font-size:.67rem;padding:6px 8px;white-space:normal}
+#solo-season-results{margin:0 0 14px;scroll-margin-top:65px}
+#solo-season-results[hidden]{display:none!important}
+#solo-season-results .playback-panel{margin:0 0 14px}
+.event-pokemon-sprite{height:68px;width:68px;flex:0 0 68px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 5px 6px #050b20a3)}
+.special-moment{align-items:center;min-height:88px}
+.special-moment.event-dominant{background:linear-gradient(115deg,#522b40,#341d36);border-color:#ed6d81}
+.dominant-winner{color:#ff546b!important;font-weight:950!important;text-shadow:0 0 14px #ef436275}
+.outcome-label{font-size:.9rem;font-weight:900;letter-spacing:.05em;margin:10px 0}
+.outcome-label.win{color:#f7d28c}.outcome-label.loss{color:#ff99a1}
+.completed-replay{justify-content:flex-end;margin:0 0 14px!important}
+@media(max-width:760px){#league-view .league-heading{flex-wrap:wrap;gap:6px}#league-view .league-heading .invite{width:auto;max-width:100%;display:flex;align-items:center;gap:7px}.event-pokemon-sprite{height:52px;width:52px;flex-basis:52px}#solo-season-results{scroll-margin-top:95px}}
+
+/* v5.6 — charcoal / maroon / aged-gold. The baseball field alone retains natural green turf. */
+:root{--bg:#141416;--panel:#202023;--panel2:#29292d;--line:#49494c;--ink:#f7f7f7;--mute:#bcbabd;--mint:#e8e8e8;--gold:#bd9956;--red:#822f40}
+html,body{background:#151517!important;color:#f7f7f7!important}
+body{background-image:linear-gradient(160deg,#1b1b1e 0%,#121214 58%,#19191c 100%)!important}
+.top{background:#171719f5!important;border-color:#4d4946!important}
+.logo,.intro h1,.intro h1 em{color:#f8f7f5!important}.logo b{color:#c49c60!important}
+.intro .overline,.overline,.panel-tag,.tiny,.label,.order-heading{color:#c09a60!important}
+.intro p,.muted,.hintline,.info,.smallhint{color:#bab9bb!important}
+.panel,.guide-footer .panel,.draft-top-bar,.past-area,.selected-card,.champion-v4,.champion{background:linear-gradient(145deg,#27272a,#1c1c1f)!important;border-color:#49494c!important;box-shadow:0 12px 26px #09090933!important}
+.panel:nth-child(3n+2),.panel:nth-child(3n+3){border-top-color:#49494c!important}
+input,select,.solo-search{background:#19191c!important;color:#fff!important;border-color:#58585a!important}
+input:focus,select:focus{border-color:#bc9658!important;box-shadow:0 0 0 2px #bc965830!important}
+.btn,.btn.quiet,.btn.secondary{background:#313136!important;color:#fff!important;border:1px solid #57575b!important}
+.btn.primary,.primary.btn{background:#822f40!important;border-color:#a04d59!important;color:#fff!important}
+.btn.secondary{background:#9a7b43!important;border-color:#ad915e!important;color:#fff!important}
+.btn.danger{background:#6d2734!important;border-color:#9c4356!important;color:#fff!important}
+.btn:hover:not(:disabled){filter:brightness(1.17)!important}
+.baggie,.baggie.warn,.progress{background:#302b24!important;color:#e3c28a!important}
+.lobby-row,.seat,.lobby-list,.roster-grid,.slot-row,.past-row,.order-entry,.chat-log,.scorecard,.pokemon-tile,.pokemon-card,.selected-card,.stat-tiles>div,.bench-wrap,.bench-spot,.game-recap,.fatigue-card,.special-moment,.game-scroll,.table-viewport,.draft-order-toggle{background:#252528!important;border-color:#49494d!important;color:#f3f3f3!important}
+.scorecard b,.slot-row strong,.order-entry .order-num,.roster-grid strong,.bench-title,.bench-spot strong,.stat-table th,.games-table th,.pokemon-card .score,.scorecard .score,.scorecard span,.invite strong{color:#d2aa68!important}
+.scorecard span{color:#c5c3c6!important}
+.chat-line b,.seat .number,.turn-main b{color:#eee!important}
+.chat-line.system{color:#c4c2c4!important}
+.order-entry.now,.pokemon-tile.active{border-color:#c7a368!important;background:#39312a!important}
+.pokemon-tile.is-favorite{border-color:#be9451!important}
+.pokemon-tile .pokemon-card,.pokemon-card{background:#29292d!important}
+.pokemon-card:hover,.pokemon-card.active{background:#3b3533!important;border-color:#bd9956!important}
+.pokemon-card.legend-locked,.pokemon-card.legend-locked:hover{background:#2d2d2f!important;border:1px solid #4b4b4b!important;filter:grayscale(1);opacity:.43!important;cursor:not-allowed!important}
+.pokemon-card.legend-locked img{filter:grayscale(1)}
+.favorite-toggle{background:#353438!important;border-color:#615e60!important;color:#ddd!important}
+.favorite-toggle[aria-pressed="true"]{background:#5b4427!important;color:#e8bf7c!important;border-color:#b18e50!important}
+.bench-wrap{background:#242426!important}.bench-spot,.bench-spot.filled{background:#303034!important;border-color:#565459!important}
+.bench-spot:hover,.bench-spot.selected{background:#3d3433!important;border-color:#bb9656!important}
+.field{border-color:#8b7959!important}
+.field-spot.filled .spot-pos{background:#242327de!important;color:#ead1a0!important;border-color:#b89a66a3!important}
+.field-spot.filled .sprite[draggable="true"],.bench-spot img[draggable="true"]{pointer-events:auto!important;cursor:grab;user-select:none;-webkit-user-drag:element}
+.field-spot.filled .sprite[draggable="true"]:active,.bench-spot img[draggable="true"]:active{cursor:grabbing}
+.field-spot.filled,.bench-spot{user-select:none}
+.draft-top-bar.on-clock,.on-clock{border-color:#bd9a58!important;box-shadow:0 0 15px #a8813c88!important}
+.turn-clock{background:#2b2a2c!important;color:#d7b778!important;border-color:#b09159!important}
+.draft-order-toggle summary{color:#c9a46c!important}.order-mini{color:#ddd!important}.order-toggle-label{color:#d4b57a!important;border-color:#827252!important}
+.champion-v4{background:linear-gradient(150deg,#382d25,#242326)!important;border:2px solid #b79554!important}
+.champion-v4 h2,.champion h2{color:#ddbb79!important}
+.extras-head,.special-moment b{color:#d9b77a!important}
+.special-moment.event-dominant{background:#3d252c!important;border-color:#963744!important}
+.special-moment.event-walkoff,.event-comeback,.event-no_hitter{background:#353033!important}
+.outcome-label.win{color:#e3be7e!important}.outcome-label.loss{color:#c77c88!important}
+.table-viewport .stat-table td:first-child{background:#29282b!important}
+#toast{background:#282629!important;border-color:#b2925b!important}
+footer{color:#acaaae!important}
+/* Gold-bounded World Series presentation distinct from the regular-season panel. */
+.world-series-stage{border:3px solid #b5934e;outline:1px solid #5c492e;box-shadow:0 0 0 5px #b5934e1a,0 14px 55px #0008;background:linear-gradient(150deg,#2a2622,#171719);padding:clamp(18px,3vw,34px);border-radius:18px;scroll-margin-top:65px}
+.world-series-kicker{font-size:.79rem;font-weight:900;color:#e3bd73;letter-spacing:.23em;margin-bottom:9px}
+.world-series-stage h2{font-size:clamp(1.8rem,4vw,3.2rem);color:#ffe0a1;letter-spacing:-.035em}
+.world-series-desc{font-size:.85rem;color:#bdb9b7;margin-top:8px}
+.ws-tally{display:grid;grid-template-columns:1fr 60px 1fr;gap:8px;align-items:center;margin:20px 0}
+.ws-tally>div:not(.ws-vs){background:#272629;border:1px solid #726044;border-radius:10px;text-align:center;padding:18px 9px;display:grid;gap:6px}
+.ws-tally b{font-size:clamp(.8rem,2vw,1.2rem);overflow-wrap:anywhere}
+.ws-tally strong{font-size:clamp(2rem,6vw,4rem);line-height:1;color:#ecc47e}
+.ws-tally span{font-size:.7rem;color:#aba7a4}
+.ws-vs{text-align:center;font-weight:900;color:#cab083}
+.ws-game{text-align:center;background:#181719;border:1px solid #5f5039;border-radius:12px;padding:20px 13px;min-height:145px}
+.ws-result{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin:12px 0;font-size:clamp(.7rem,2vw,1.15rem)}
+.ws-result span{font-weight:800}.ws-result strong{white-space:nowrap;color:#ffe2a9;font-size:clamp(1.7rem,4vw,3rem)}
+.ws-playback-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:10px;margin-top:18px}
+.ws-playback-actions span{margin-right:auto;color:#c0b5a0;font-size:.8rem}
+@media(max-width:570px){.ws-tally{grid-template-columns:1fr 28px 1fr}.world-series-stage{padding:15px}.ws-tally>div:not(.ws-vs){padding:10px 4px}}
+/* Final color cleanup for legacy ID-specific and hover rules. */
+.btn.primary:hover:not(:disabled){background:#9b4050!important;border-color:#ae5a69!important;color:#fff!important}
+.btn.secondary:hover:not(:disabled){background:#ad8b4e!important;color:#fff!important}
+#league-view .league-heading .invite,.invite{background:#252528!important;border:1px solid #514e4c!important}
+#pokemon-inspector{background:#222226!important;border-color:#70604c!important}
+.types{color:#c7c4c6!important}
+.small-stat span,.challenge-box{background:#29282a!important;border-color:#4a494c!important}
+
+/* Pokémon Baseball v6.0: lineup composition and readable season summaries */
+.batting-order-panel{overflow:hidden}
+.batting-order-panel .sectionhead{margin-bottom:8px}
+.batting-order-list{display:grid;gap:5px;margin-top:12px}
+.batting-order-row{display:flex;align-items:center;gap:9px;min-width:0;background:#222225;border:1px solid #4c4a49;border-radius:10px;padding:5px 8px}
+.batting-order-row .batting-rank{font-size:.85rem;font-weight:900;color:#d5ad6b;width:23px;text-align:center;flex-shrink:0}
+.batting-order-row img{width:43px;height:43px;image-rendering:pixelated;object-fit:contain;flex-shrink:0}
+.batting-order-row .batting-info{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.batting-order-row .batting-info b{font-size:.84rem;color:#f7f6f2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.batting-order-row .batting-info small{font-size:.67rem;color:#b3b0af}
+.batting-arrows{display:flex;gap:4px;flex-shrink:0}
+.batting-arrows .btn{font-size:.72rem;padding:5px 8px;min-width:38px}
+.batting-arrows .btn:disabled{opacity:.25}
+.ready-progress{display:flex;gap:5px;flex-wrap:wrap;margin:12px 0}
+.ready-chip{font-size:.7rem;color:#d8b0b4;background:#31272b;border:1px solid #734d54;border-radius:7px;padding:5px 8px}
+.ready-chip.ready{color:#e7d0a0;background:#393128;border-color:#8f7445}
+.ready-panel .btn{margin-top:6px}
+.awards-panel{margin:16px 0}
+.awards-panel .award-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin-top:11px}
+.award-card{display:flex;gap:10px;align-items:center;background:#242326;border:1px solid #55504b;padding:11px;border-radius:10px;min-width:0}
+.award-card img{width:62px;height:62px;object-fit:contain;image-rendering:pixelated;flex-shrink:0}
+.award-card>div{min-width:0;display:flex;flex-direction:column;gap:3px}
+.award-card small{text-transform:uppercase;color:#d5ad70;font-weight:800;font-size:.7rem;letter-spacing:.04em}
+.award-card b{color:#fff;font-size:1rem}
+.award-card span{color:#bdbbc0;font-size:.73rem;line-height:1.45}
+.stat-digest{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:9px;margin:12px 0 21px}
+.digest-card{padding:13px;background:#262429;border:1px solid #504950;border-radius:10px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.digest-card>span{color:#c7a777;font-size:.74rem;font-weight:800;text-transform:uppercase}
+.digest-card>b{color:#f6f3f3;line-height:1.25}
+.digest-card>strong{font-size:1.2rem;color:#ebc780}
+.digest-card>small{color:#b4afb1;font-size:.72rem}
+.season-narrative{background:#262328;border-left:3px solid #b99b60;border-radius:9px;padding:13px 15px;margin:10px 0 14px;color:#e5e1de;font-size:.87rem;line-height:1.5}
+.season-narrative strong{color:#ecd0a0}
+@media(max-width:680px){.batting-order-row{padding:4px 5px}.batting-arrows .btn{padding:4px 6px;min-width:33px}.awards-panel .award-grid{grid-template-columns:1fr}.stat-digest{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* v6.0 achievement records and expanded multi-round playoffs */
+.record-digest{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:12px 0}
+.record-digest>div{background:#252427;border:1px solid #4b484a;border-radius:9px;padding:12px;display:flex;flex-direction:column;gap:7px}
+.record-digest small{color:#bab5b6;font-size:.73rem}.record-digest b{color:#dfbb7d;font-size:1.35rem}
+.personal-records-panel h3{font-size:1rem;margin:16px 0 9px}
+.achievement-list{display:flex;gap:7px;flex-wrap:wrap}
+.achievement{font-size:.78rem;padding:8px 10px;border-radius:8px;border:1px solid #55473b}
+.achievement.earned{background:#443325;color:#f6d498;border-color:#a08045;font-weight:800}
+.achievement.locked{background:#242427;color:#878487;border-color:#454247}
+.record-history{display:flex;flex-direction:column;gap:6px}
+.record-history>div{display:flex;justify-content:space-between;gap:8px;padding:9px;background:#252427;border-radius:7px;font-size:.8rem}
+.record-history span{color:#beafb0;text-align:right}
+.bracket-panel{margin:16px 0}
+.bracket-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;align-items:start;margin-top:14px}
+.bracket-round>h3{font-size:.9rem;text-transform:uppercase;color:#d9b778;letter-spacing:.07em;margin:0 0 10px}
+.bracket-match{background:#232225;border:1px solid #5b5047;border-radius:11px;padding:10px;margin-bottom:10px}
+.bracket-match>div{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 8px;border-radius:5px;color:#c4c0c1;font-size:.84rem}
+.bracket-match>div span{min-width:0;overflow-wrap:anywhere}
+.bracket-match>div strong{font-size:1.15rem;color:#f4e7df}
+.bracket-match>div.advancing{background:#44372c;color:#ffe0a6;font-weight:800}
+.bracket-match details{padding:8px;border-top:1px solid #4b494b;margin-top:4px}
+.bracket-match summary{cursor:pointer;color:#cda56a;font-size:.76rem;font-weight:800}
+.bracket-game-list{padding-top:8px;max-height:200px;overflow-y:auto}
+.bracket-game-list p{font-size:.74rem;color:#c7c2c2;margin-bottom:5px}
+@media(max-width:650px){.record-digest{grid-template-columns:repeat(2,minmax(0,1fr))}.record-history>div{flex-direction:column}.record-history span{text-align:left}}
+
+/* v6.1: compact scouting for picked Pokémon only; no hidden position fits. */
+#roster-scout{position:fixed;z-index:100;width:min(296px,calc(100vw - 16px));background:#222225;color:#f4f2ed;border:1px solid #a48b63;border-radius:10px;padding:10px;box-shadow:0 14px 32px #000b;pointer-events:none;font-size:.74rem;line-height:1.35}
+#roster-scout[hidden]{display:none!important}
+.roster-scout-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.roster-scout-header img{width:49px;height:49px;object-fit:contain;image-rendering:pixelated;flex-shrink:0}
+.roster-scout-header b{display:block;font-size:.98rem;margin-bottom:3px}
+.roster-scout-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+.roster-scout-stats span{display:flex;justify-content:space-between;gap:6px;background:#343337;border-radius:4px;padding:5px 7px}
+.roster-scout-stats small{color:#bbb8bb;font-size:.69rem}
+.roster-scout-stats b{color:#e4c18a;font-size:.8rem}
+#roster-scout p{margin-top:8px;color:#d7d4d1;font-size:.72rem}
+.field-spot.filled,.bench-spot.filled,.slot-row[data-inspect],.batting-order-row[data-inspect]{cursor:help}
+.lineup-help{border:1px solid #a0875e;background:#302b25;color:#f3eee4;border-radius:9px;padding:10px 13px;font-size:.82rem;line-height:1.45;margin:6px 0 13px}
+.lineup-help b{color:#e9c789}
+.solo-lineup-help{margin:10px 0}
+.stats-dropdown{border:1px solid #4d4643;background:#252426;border-radius:9px;padding:0;margin:14px 0}
+.stats-dropdown>summary{padding:14px 16px;font-weight:750;color:#e6c38a;list-style-position:inside}
+.stats-dropdown[open]>summary{border-bottom:1px solid #494349}
+.stats-dropdown-body{padding:8px 14px 16px;min-width:0;overflow:hidden}
+.stats-dropdown-body .stat-results{max-width:100%;min-width:0}
+
+/* Pokémon Baseball 6.2: accessible batting order and a single persistent scouting guide. */
+.global-scout-guide{margin:22px 0 28px;padding:0;overflow:hidden;background:#232327!important;border:1px solid #63584a!important}
+.global-scout-guide>.guide-main-toggle{display:flex;align-items:center;justify-content:space-between;gap:15px;cursor:pointer;padding:16px 20px;list-style:none;color:#f6f1e8;user-select:none}
+.global-scout-guide>.guide-main-toggle::-webkit-details-marker{display:none}
+.global-scout-guide>.guide-main-toggle:focus-visible{outline:2px solid #d6b475;outline-offset:-3px}
+.guide-main-toggle b{display:block;font-size:1.05rem}
+.guide-main-toggle small{display:block;color:#bcb6b3;margin-top:3px;font-size:.76rem}
+.guide-main-toggle .guide-arrow{background:#65472a;border:1px solid #ab8b54;border-radius:7px;padding:8px 12px;font-size:.78rem;font-weight:750;white-space:nowrap}
+.global-scout-guide[open] .guide-arrow{font-size:0}
+.global-scout-guide[open] .guide-arrow::after{content:'Close guide';font-size:.78rem}
+.global-scout-content{border-top:1px solid #4f4c49;padding:17px 19px 22px;line-height:1.53}
+.guide-introduction{border-left:3px solid #bd995d;background:#302b29;padding:11px 14px;margin-bottom:15px;border-radius:7px}
+.guide-introduction p{font-size:.9rem;color:#e0d9d3}
+.guide-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0 20px}
+.guide-topic{background:#2b292d;padding:14px 16px;border:1px solid #504c48;border-radius:9px;min-width:0}
+.guide-topic h3{color:#e4c18a;font-size:.97rem;margin-bottom:10px}
+.guide-topic p{font-size:.84rem;color:#d8d1d1;line-height:1.52;margin:0 0 8px}
+.guide-topic p:last-child{margin-bottom:0}
+.guide-topic p b{color:#faf1de}
+.guide-positions-title{color:#f4ead8;margin:9px 0 6px}
+.guide-table-scroll{max-width:100%;overflow-x:auto;margin-top:12px;border:1px solid #514a47;border-radius:10px}
+.guide-priority-table{width:100%;min-width:735px;border-collapse:collapse;font-size:.79rem}
+.guide-priority-table th,.guide-priority-table td{padding:10px 11px;text-align:left;border-bottom:1px solid #484345;vertical-align:middle}
+.guide-priority-table thead th{background:#362c2b;color:#edc791;font-size:.73rem;text-transform:uppercase;letter-spacing:.04em}
+.guide-priority-table tbody tr:nth-child(odd){background:#29272a}
+.guide-priority-table tbody tr:nth-child(even){background:#302d30}
+.guide-priority-table tbody th b{display:block;color:#f9eee1}
+.guide-priority-table tbody th small{display:block;color:#b7b1ad;font-size:.7rem;font-weight:400}
+.guide-priority-table td strong{color:#f5e7cc}
+.guide-note{margin-top:11px}
+.batting-order-panel{scroll-margin-top:90px;border-color:#756043!important}
+.batting-order-panel .batting-editor-title h3{font-size:1.12rem;color:#f6e6c9}
+.batting-explainer{font-size:.83rem;line-height:1.5;color:#ded9d5;margin:6px 0 11px}
+.batting-explainer b{color:#eed0a0}
+.batting-quicktips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:9px 0}
+.batting-quicktips span{padding:7px 5px;text-align:center;background:#302a2a;border:1px solid #52463c;border-radius:6px;font-size:.68rem;color:#e2dad4}
+.batting-quicktips b{display:block;color:#e6c186;font-size:.82rem}
+.batting-jump-label{display:flex;flex-direction:column;gap:3px;font-size:.64rem;color:#cfbfaa;white-space:nowrap;flex-shrink:0}
+.batting-jump{min-width:55px;width:55px;padding:5px 7px;font-size:.79rem;border:1px solid #726043;border-radius:6px;background:#2a2526;color:#f4e6cf}
+.batting-editor-actions{margin-top:12px;gap:9px}
+.batting-editor-actions .hintline{flex:1}
+@media(max-width:800px){.guide-topic-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.global-scout-guide>.guide-main-toggle{padding:13px}.global-scout-content{padding:12px}.batting-order-row{gap:5px}.batting-order-row img{width:36px;height:36px}.batting-jump{min-width:46px;width:46px}.batting-quicktips{gap:4px}.batting-quicktips span{font-size:.62rem}.batting-arrows .btn{font-size:.65rem;padding:5px}}

@@ -1,0 +1,13 @@
+{
+  "name": "pokemon-baseball-draft-v6-2",
+  "version": "0.6.2",
+  "private": true,
+  "description": "Fifteen-Pok\u00e9mon baseball, 90-second ready lineup, batting order, season awards, roster scouting and collapsible stats and newcomer batting-order guide",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node type-balance-test.js && node fatigue-test.js && node special-events-test.js && node smoke-test.js && node draft-bot-test.js && node v55-test.js && node v56-test.js && node v60-test.js && node v61-test.js && node v62-test.js"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
